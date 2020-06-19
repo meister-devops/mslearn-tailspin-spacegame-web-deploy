@@ -60,7 +60,7 @@ stages:
         command: 'publish'
         projects: '$(System.DefaultWorkingDirectory)/**/Tailspin.SpaceGame.Web.csproj' 
         publishWebProjects: false
-        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+        arguments: '--no-build --configuration $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
         zipAfterPublish: true
         modifyOutputPath: true
 
